@@ -1,0 +1,98 @@
+body {
+  background-image: url("default_graphics/mission_mars.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding: 6em;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.openDesignTitle {
+  innerHTML: "Open Design Time";
+  color: white;
+  float: right;
+  width: 4.6em;
+}
+
+.openDesignDescription {
+  innerHTML: "Let your imagination be your guide with our open design kits.";
+  color: white;
+  float: right;
+  width: 10.5em;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  display: none;
+  z-index: -5;
+}
+
+#title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 7em;
+  color: #EC7404;
+}
+
+#description {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 3em;
+  padding-bottom: 1em;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+#Next {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  text-align: center;
+  color: #EC7404;
+}
+
+#time {
+  font-size: 7em;
+  color: #EC7404;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.Weekend {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 1em;
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #ffffff;
+  display: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  line-height: 1.6;
+  margin-top: 11px;
+}
+
+#labs {
+  padding-top: 2em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 3em;
+  color: #ffffff;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}

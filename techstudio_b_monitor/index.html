@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tech Studio B Monitor</title>
+  <link rel="icon" href="#">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="timer.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <video autoplay loop id="myVideo">
+  <source src="default_graphics/keva_blocks.mp4" type="video/mp4">
+</video>
+<div id=heading>
+  <h1 id="title">Mission: Mars</h1>
+  <p id="description">
+    Design and test a deployable habitat for living on Mars.
+  </p>
+</div>
+
+  <div class="Weekend">
+    Open from <br /> 1:30 p.m. to 4:45 p.m.
+  </div>
+  <div id="labSessions">
+    <div id="Next">Next Session:</div>
+    <p id="time"></p>
+    <div id="labs">
+      <div id="available">Available sessions</div>
+      <ul>
+        <li id="lab_time1">
+          10:00 a.m.
+        </li>
+        <li id="lab_time2">
+          10:45 a.m.
+        </li>
+        <li id="lab_time3">
+          11:30 a.m.
+        </li>
+        <li id="lab_time4">
+          12:30 p.m.
+        </li>
+        <li id="lab_time5">
+          1:15 p.m.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- The script below connects the publicSpreadsheetUrl to the html page -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <script type='text/javascript'>
+    var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1lp2TuN6sNWf1cjiYOD_n7MOKougpGs5X9wI7Jr7xGMI/edit#gid=0';
+
+    function init() {
+      Tabletop.init({
+        key: '1lp2TuN6sNWf1cjiYOD_n7MOKougpGs5X9wI7Jr7xGMI',
+        callback: showInfo,
+        simpleSheet: true
+      })
+    }
+
+    function showInfo(data, tabletop) {
+      document.getElementById("title").innerHTML = data[0].title;
+      document.getElementById("description").innerHTML = data[0].description;
+      var id = data[0].picture.split("/")[5]
+      var url = "http://drive.google.com/uc?export=view&id=" + id;
+      document.body.style.backgroundImage = "url('" + url + "')";
+      console.log("Picture from " + url + " added as background image")
+    }
+    window.addEventListener('DOMContentLoaded', init)
+  </script>
+</body>
+
+</html>
